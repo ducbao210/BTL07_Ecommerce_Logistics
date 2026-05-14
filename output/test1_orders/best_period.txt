@@ -1,0 +1,4 @@
+Best period (Kadane):
+From: 2025-01-01
+To: 2025-01-01
+Max Revenue: 160.00

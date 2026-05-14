@@ -1,0 +1,5 @@
+Shortest Window reaching target:
+From: 2025-01-15
+To: 2025-01-15
+Total Revenue: 1500.00
+Length: 1 days
