@@ -3,14 +3,14 @@
 
 # BTL07: Hệ thống phân tích đơn hàng và tối ưu lô hàng
 
-## Thành viên dự án
+## Thành viên
 | Họ và tên | MSSV |
 |-|-|
 | Nguyễn Đức Bảo | 23280040 |
 | Trần Trung Kiên | 23280066 |
 | Nguyễn Đức Hiếu | 24280064 |
 
-## Cấu trúc dự án
+## Cấu trúc project
 
 ```bash
     BTL07_Ecommerce_Logistics/
@@ -55,7 +55,7 @@ Dự án sử dụng cấu trúc dữ liệu lồng nhau để tổ chức thôn
   - `vector<Order>`
     - `vector<LineItem>`
 
-## Các thuật toán áp dụng
+## Các thuật toán
 
 Dự án tích hợp và áp dụng các thuật toán tối ưu hóa trên dãy con để phân tích dữ liệu:
 
@@ -70,8 +70,18 @@ Dự án tích hợp và áp dụng các thuật toán tối ưu hóa trên dãy
 
 - **Trình biên dịch C++**: Hỗ trợ chuẩn C++17 (ví dụ: g++ phiên bản 7 trở lên).
 - **Công cụ `make`**: Để tự động hóa quá trình biên dịch.
+### Clone và change dir
+1. **Clone và chuyển đổi thư mục**
 
-### Biên dịch ứng dụng
+    ```bash
+    git clone https://github.com/ducbao210/BTL07_Ecommerce_Logistics.git
+    ```
+
+    ```bash
+    cd BTL07_Ecommerce_Logistics
+    ```
+
+### Build
 
 Mở terminal hoặc Command Prompt tại thư mục gốc của dự án và chạy lệnh sau để biên dịch mã nguồn:
 
@@ -81,9 +91,9 @@ make
 
 Tạo ra file thực thi `logistics_app` trong thư mục gốc của dự án.
 
-### Chạy ứng dụng
+### Run
 
-Bạn có thể chạy ứng dụng theo các cách sau:
+Có thể chạy ứng dụng theo các cách sau:
 
 1.  **Chạy với dữ liệu mặc định:**
 
@@ -118,20 +128,16 @@ make clean
 ## Test case:
 
 1.  **Normal Case** (`orders.csv`):
-    - **Mô tả:** Dữ liệu đầy đủ với nhiều ngày và nhiều đơn hàng, đại diện cho kịch bản sử dụng thông thường.
-    - **Kỳ vọng:** Ứng dụng tính toán chính xác doanh thu, tìm được chuỗi ngày có doanh thu cao nhất (Kadane) và cửa sổ ngày ngắn nhất đạt mục tiêu doanh thu (Sliding Window) một cách tối ưu.
+    - **Mô tả:** Dữ liệu đầy đủ với nhiều ngày và nhiều đơn hàng, đại diện cho việc sử dụng thông thường.
 
 2.  **Edge Case 1** (`test1_orders.csv`):
     - **Mô tả:** Dữ liệu chỉ chứa một ngày và một đơn hàng duy nhất.
-    - **Kỳ vọng:** Cả thuật toán Kadane và Sliding Window đều trả về kết quả phân tích chỉ cho ngày đó.
 
 3.  **Edge Case 2** (`test2_orders.csv`):
     - **Mô tả:** Dữ liệu bao gồm các trường hợp doanh thu âm (ví dụ: do hoàn trả hàng).
-    - **Kỳ vọng:** Thuật toán Kadane có khả năng xử lý các giá trị âm để tìm ra phân đoạn doanh thu tốt nhất, ngay cả khi có sự xuất hiện của các khoản hoàn trả.
 
 4.  **Edge Case 3** (`test3_orders.csv`):
     - **Mô tả:** Mục tiêu doanh thu $S$ được đặt ra không thể đạt được với dữ liệu hiện có.
-    - **Kỳ vọng:** File `output/window.txt` sẽ thông báo rõ ràng rằng không tìm thấy cửa sổ thỏa mãn điều kiện mục tiêu doanh thu.
 
 ## Thành phần Output
 
