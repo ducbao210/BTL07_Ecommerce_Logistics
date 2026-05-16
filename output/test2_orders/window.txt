@@ -1,1 +1,5 @@
-No window satisfies the target.
+Shortest Window reaching target:
+From: 2025-01-01
+To: 2025-01-03
+Total Revenue: 1500.00
+Length: 2 days

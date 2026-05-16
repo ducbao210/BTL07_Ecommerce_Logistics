@@ -2,6 +2,7 @@
 #include "../include/utils.h"
 #include <map>
 #include <algorithm>
+#include <iostream>
 using namespace std;
 
 namespace Processing
@@ -12,7 +13,11 @@ namespace Processing
         map<string, Order> order_map;
         for (const auto &row : raw_data)
         {
-            // Removed strict > 0 validation to support "doanh thu âm (hoàn trả)" test case
+            if (row.qty <= 0 || row.price <= 0)
+            {
+                cerr << "Warning: Skipping invalid line item (qty <= 0 or price <= 0) for order " << row.order_id << endl;
+                continue;
+            }
             if (order_map.find(row.order_id) == order_map.end())
             {
                 order_map[row.order_id] = {row.order_id, row.date, row.customer, {}};

@@ -101,7 +101,9 @@ int main(int argc, char *argv[])
     // 3. Console Output Summary
     cout << "\n--- Statistics ---" << endl;
     cout << "Avg Daily Revenue: " << stats.mean << endl;
+    cout << "STD Daily Revenue: " << stats.std_dev << endl;
     cout << "Max Daily Revenue: " << stats.max << endl;
+    cout << "Min Daily Revenue: " << stats.min << endl;
     cout << "Longest Growth Streak: " << streak.length << " days" << endl;
 
     cout << "\n--- Top 5 Products ---" << endl;
@@ -112,6 +114,7 @@ int main(int argc, char *argv[])
 
     cout << "\nAnalysis complete. Results written to "
          << output_dir << "/" << endl;
-
+    cout << "\n-----------------------------\n"
+         << endl;
     return 0;
 }
